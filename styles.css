@@ -67,8 +67,26 @@ h2{
 }
 nav, aside{
   border-radius:5px;
-  overflow:hidden;
   background-color:#aba;
+}
+
+main {
+	display: inline-flex;
+	width: 100vw;
+}
+
+nav {
+	order: 1;
+}
+
+aside {
+	order: 3;
+}
+
+.content {
+	order: 2;
+	min-height: 100vh;
+	display: flex;
 }
 nav a{
   display:block;
@@ -110,10 +128,8 @@ figcaption{
   width:58%;
   text-align:center;
 }
-
-
 section{
-  display:none;
+
 }
 section:target{
   display:block;
@@ -124,4 +140,25 @@ footer p{
   padding:10px;
   margin:0 auto;
   text-align:center;
+}
+
+@media screen and (max-width: 750px) {
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav {
+		width: 100%;
+		order: 2;
+	}
+
+	aside {
+		width: 100%;
+		order: 3;
+	}
+
+	.content {
+		order: 1;
+	}
 }

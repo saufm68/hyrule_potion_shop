@@ -24,7 +24,6 @@ header, footer{
 
 nav, aside{
   min-width:160px;
-  max-width:160px;
 }
 
 @media screen and (max-width: 620px){
